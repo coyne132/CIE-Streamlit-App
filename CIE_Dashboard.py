@@ -362,23 +362,25 @@ def load_public_libraries():
 def load_zipcodes():
 	return gpd.read_file("data/franklin_zcta.geojson").to_crs(epsg=4326)
 
+
+with st.spinner("Loading data..."):
 #Load acs_pca data:
-acs_pca = load_acs_pca()
+	acs_pca = load_acs_pca()
 
 #Load tract_dsh data:
-tract_dsh_lookup = load_tract_dsh_lookup()
+	tract_dsh_lookup = load_tract_dsh_lookup()
 
 #Load acs_prioritization data:
-acs_prioritization = load_acs_prioritization()
+	acs_prioritization = load_acs_prioritization()
 
 #Load public_transit:
-public_transit = load_public_transit()
+	public_transit = load_public_transit()
 
 #Load public_libraries:
-public_libraries = load_public_libraries()
+	public_libraries = load_public_libraries()
 
 #Load zipcodes:
-zips = load_zipcodes()
+	zips = load_zipcodes()
 
 # ===================================
 # Working Dataframe 
